@@ -5,10 +5,15 @@
  * You can choose to hyphenate it
  * You can choose it to be returned in lower case
 
+### Installation
+```
+	go get github.com/sathishvj/projectnamegenerator
+```
+
 ### Examples:
 
 ```
-	import "github.com/sathishvj/projectnamegenerator" png
+	import png "github.com/sathishvj/projectnamegenerator"
 
 	for i := 0; i < 10; i++ {
 		fmt.Println(png.NewName())
@@ -27,7 +32,7 @@
  * Arrogantly List Thundering Dolls
 
 ```
-	import "github.com/sathishvj/projectnamegenerator" png
+	import png "github.com/sathishvj/projectnamegenerator"
 
 	png1 := png.NewGenerator()
 	png1.Lowercase = true
@@ -50,7 +55,7 @@
  * greedily-launch-damaged-direction
 
 ```
-	import "github.com/sathishvj/projectnamegenerator" png
+	import png "github.com/sathishvj/projectnamegenerator"
 
 	png1 := png.NewGenerator()
 	png1.Lowercase = true
