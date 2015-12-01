@@ -80,3 +80,6 @@
  * massive-pizzas
  * brave-title
 
+#### Warning
+The words in the lists are not filtered for happy, positive ones.
+
