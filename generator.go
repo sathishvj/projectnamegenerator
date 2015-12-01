@@ -69,27 +69,26 @@ func NewGenerator() *ProjectNameGenerator {
 func (png *ProjectNameGenerator) NewName() string {
 
 	rand.Seed(time.Now().UTC().UnixNano())
-	adjSet := rand.Intn(len(png.Adjectives))
-	nounSet := rand.Intn(len(png.Nouns))
-	adverbSet := rand.Intn(len(png.Adverbs))
-	verbSet := rand.Intn(len(png.Verbs))
-
-	adjItem := rand.Intn(len(png.Adjectives[adjSet]))
-	nounItem := rand.Intn(len(png.Nouns[nounSet]))
-	adverbItem := rand.Intn(len(png.Adverbs[adverbSet]))
-	verbItem := rand.Intn(len(png.Verbs[verbSet]))
 
 	var parts []string
 	if png.HasAdverb {
+		adverbSet := rand.Intn(len(png.Adverbs))
+		adverbItem := rand.Intn(len(png.Adverbs[adverbSet]))
 		parts = append(parts, png.Adverbs[adverbSet][adverbItem])
 	}
 	if png.HasVerb {
+		verbSet := rand.Intn(len(png.Verbs))
+		verbItem := rand.Intn(len(png.Verbs[verbSet]))
 		parts = append(parts, png.Verbs[verbSet][verbItem])
 	}
 	if png.HasAdjective {
+		adjSet := rand.Intn(len(png.Adjectives))
+		adjItem := rand.Intn(len(png.Adjectives[adjSet]))
 		parts = append(parts, png.Adjectives[adjSet][adjItem])
 	}
 	if png.HasNoun {
+		nounSet := rand.Intn(len(png.Nouns))
+		nounItem := rand.Intn(len(png.Nouns[nounSet]))
 		parts = append(parts, png.Nouns[nounSet][nounItem])
 	}
 
