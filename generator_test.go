@@ -1,6 +1,7 @@
 package projectnamegenerator
 
 import (
+	"fmt"
 	"strings"
 	"testing"
 )
@@ -68,6 +69,11 @@ func Test_NewName(t *testing.T) {
 	n = png.NewName()
 	if n != "" { // some words might have hyphens
 		t.Errorf("Removed all parts, so was expecting an empty string: %s. ", n)
+	}
+
+	png = NewGenerator()
+	for i := 0; i < 90; i++ {
+		fmt.Println(png.NewName())
 	}
 
 }
